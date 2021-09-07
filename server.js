@@ -1,7 +1,7 @@
 //requiring models
 
 const express = require("express");
-const routes = require("");
+const routes = require("./config/connection");
 
 //connection setup
 const app = express();
