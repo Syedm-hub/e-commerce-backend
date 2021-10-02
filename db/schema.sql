@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 DROP DATABASE IF EXISTS ecommerce_db;
 CREATE DATABASE ecommerce_db;
+=======
+--DROP DATABASE
+DROP DATABASE IF EXISTS ecommerce_db;
+
+--CREATE DATABASE
+CREATE DATABASE ecommerce_db;
+>>>>>>> 6313e3bb51efc2f1b5f1a7213681e372cdb61431
