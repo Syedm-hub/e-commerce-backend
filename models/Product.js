@@ -1,17 +1,12 @@
-//imporing sequelize library
 const { Model, DataTypes } = require("sequelize");
-//setting up connection
 const sequelize = require("../config/connection");
-
-//creating product table
 class Product extends Model {}
-
 Product.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      promaryKey: true,
       allowNull: false,
+      primaryKey: true,
       autoIncrement: true,
     },
     product_name: {
@@ -25,16 +20,14 @@ Product.init(
         isDecimal: true,
       },
     },
-
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 15,
-      validate: {
+      defaultValue: 10,
+      Validate: {
         isNumeric: true,
       },
     },
-
     category_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -51,5 +44,4 @@ Product.init(
     modelName: "product",
   }
 );
-
 module.exports = Product;
